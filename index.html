@@ -124,13 +124,14 @@
       box-shadow: 0 8px 25px rgba(0,0,0,0.06);
     }
 
-    /* FOTO - MEMPERTAHANKAN RASIO ASLI */
+    /* FOTO - TIDAK TERPOTONG & MEMPERTAHANKAN RASIO ASLI */
     .moment img {
-      width: 100%;
-      height: auto;
       display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      margin: 0 auto;
       object-fit: contain;
-      background: #f5f1eb;
     }
 
     .caption {
@@ -166,6 +167,7 @@
     }
 
     @media (max-width: 600px) {
+
       header h1 {
         font-size: 2.2em;
       }
@@ -180,6 +182,11 @@
 
       .caption p {
         font-size: 1em;
+      }
+
+      .moment img {
+        max-width: 100%;
+        height: auto;
       }
     }
   </style>
