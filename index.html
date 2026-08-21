@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>A Little Moment — The Journey to M.T.</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f1eb;
+      color: #333;
+    }
+
+    /* PASSWORD PAGE */
+    #lockScreen {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .lock-box {
+      background: white;
+      padding: 45px 30px;
+      border-radius: 20px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .lock-box h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .lock-box p {
+      color: #777;
+      line-height: 1.6;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      margin-top: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 10px;
+      background: #333;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    #error {
+      color: #c0392b;
+      margin-top: 10px;
+    }
+
+    /* WEBSITE CONTENT */
+    #content {
+      display: none;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+      background: #ebe4db;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header h2 {
+      font-weight: normal;
+      color: #666;
+      margin-top: 0;
+    }
+
+    header p {
+      margin-top: 40px;
+      color: #888;
+    }
+
+    .gallery {
+      max-width: 900px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .moment {
+      background: white;
+      margin-bottom: 60px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    .moment img {
+      width: 100%;
+      display: block;
+      max-height: 650px;
+      object-fit: cover;
+    }
+
+    .caption {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .caption h3 {
+      margin-top: 0;
+    }
+
+    .caption p {
+      line-height: 1.8;
+      color: #666;
+      font-size: 1.05em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 100px 30px;
+      background: #333;
+      color: white;
+    }
+
+    footer h2 {
+      font-size: 2em;
+    }
+
+    footer p {
+      color: #ddd;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      .lock-box h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PASSWORD PAGE -->
+  <div id="lockScreen">
+
+    <div class="lock-box">
+
+      <h1>🔐 A Little Moment</h1>
+
+      <p>
+        There is something waiting for you inside.
+        <br><br>
+        Enter the password to unlock the journey.
+      </p>
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter password"
+      >
+
+      <button onclick="checkPassword()">
+        Unlock
+      </button>
+
+      <p id="error"></p>
+
+    </div>
+
+  </div>
+
+
+  <!-- MAIN WEBSITE -->
+  <div id="content">
+
+    <header>
+
+      <h1>A Little Moment</h1>
+
+      <h2>The Journey to M.T.</h2>
+
+      <p>
+        Every journey is made of little moments.
+        <br>
+        Here are some of mine.
+      </p>
+
+    </header>
+
+
+    <main class="gallery">
+
+      <!-- MOMENT 1 -->
+      <section class="moment">
+
+        <img src="images/01.jpg" alt="Moment 1">
+
+        <div class="caption">
+
+          <h3>Moment 01</h3>
+
+          <p>
+            Every journey begins with a small step.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- MOMENT 2 -->
+      <section class="moment">
+
+        <img src="images/02.jpg" alt="Moment 2">
+
+        <div class="caption">
+
+          <h3>Moment 02</h3>
+
+          <p>
+            A little moment, a little memory,
+            and another step forward.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- MOMENT 3 -->
+      <section class="moment">
+
+        <img src="images/03.jpg" alt="Moment 3">
+
+        <div class="caption">
+
+          <h3>Moment 03</h3>
+
+          <p>
+            Not every part of the journey was easy,
+            but every moment became part of the story.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- MOMENT 4 -->
+      <section class="moment">
+
+        <img src="images/04.jpg" alt="Moment 4">
+
+        <div class="caption">
+
+          <h3>Moment 04</h3>
+
+          <p>
+            Slowly, the destination became closer
+            than it once seemed.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- MOMENT 5 -->
+      <section class="moment">
+
+        <img src="images/05.jpg" alt="Moment 5">
+
+        <div class="caption">
+
+          <h3>Moment 05</h3>
+
+          <p>
+            And finally,
+            all those little moments led to something bigger.
+          </p>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer>
+
+      <h2>And here we are. 🤍</h2>
+
+      <p>
+        A journey filled with challenges,
+        memories, lessons, and countless little moments.
+        <br><br>
+        And now...
+        <br>
+        <strong>The Journey to M.T.</strong>
+      </p>
+
+    </footer>
+
+  </div>
+
+
+  <script>
+
+    function checkPassword() {
+
+      const password = document.getElementById("password").value;
+
+      /* 100426 */
+      const correctPassword = "100426";
+
+      if (password === correctPassword) {
+
+        document.getElementById("lockScreen").style.display = "none";
+
+        document.getElementById("content").style.display = "block";
+
+      } else {
+
+        document.getElementById("error").innerText =
+          "Incorrect password. Try again.";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
